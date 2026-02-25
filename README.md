@@ -1,75 +1,75 @@
-# React + TypeScript + Vite
+🌦️ Weather Dashboard
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+📌 Project Overview
+This is a Weather Dashboard web application built using React.
 
-Currently, two official plugins are available:
+The application allows users to:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Enter a location (city name)
+Select a specific date and month and year
+Fetch weather data using the Visual Crossing Weather API
+Display weather details including:
 
-## React Compiler
+🌡️ Temperature
+💧 Humidity
+🌤️ Weather Condition
 
-The React Compiler is enabled on this template. See [this documentation](https://react.dev/learn/react-compiler) for more information.
+This project demonstrates:
 
-Note: This will impact Vite dev & build performances.
+-React components
+-State management
+-API integration
+-Dynamic data rendering
+-Modern frontend development using Vite
 
-## Expanding the ESLint configuration
+🚀 Setup / Run Instructions
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+1️⃣ Clone the Repository
+git clone https://github.com/Ponvarsha/Weather_checking.git
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+2️⃣ Navigate to the Project Directory
+cd Weather_checking
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+3️⃣ Install Dependencies
+npm install
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+4️⃣ Add Environment Variables
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+Create a .env file in the root folder and add:
+VITE_WEATHER_API_KEY=your_api_key_here
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+API key from:
+https://www.visualcrossing.com/
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+5️⃣ Start the Development Server
+npm run dev
+
+The application  run on:
+http://localhost:5176/
+
+🌍 API Details
+API Used:
+
+Visual Crossing Weather API
+
+API Endpoint Format:
+https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/{location}/{date}?key=YOUR_API_KEY
+Parameters:
+
+location → City name entered by the user
+date → Selected date and month and year
+
+key → My API key
+
+Output:
+
+From the API response, the application displays:
+
+-Temperature
+-Humidity
+-Weather Condition
+
+<img width="1904" height="901" alt="Screenshot 2026-02-25 143451" src="https://github.com/user-attachments/assets/564cb9d9-0be6-4ec0-9d3a-ef1f49bcdaf4" />
+
+<img width="1388" height="876" alt="Screenshot 2026-02-25 143537" src="https://github.com/user-attachments/assets/72e4d33d-b8c7-4594-83bc-2efa407ea695" />
+
